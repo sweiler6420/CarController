@@ -41,7 +41,7 @@ class PySlider(QSlider):
         else:
             sliderLength = sr.height()
             sliderMin = gr.y()
-            sliderMax = gr.bottom() - sliderLength + 1;
+            sliderMax = gr.bottom() - sliderLength + 1
         pr = pos - sr.center() + sr.topLeft()
         p = pr.x() if self.orientation() == Qt.Horizontal else pr.y()
         return QStyle.sliderValueFromPosition(self.minimum(), self.maximum(), p - sliderMin, sliderMax - sliderMin, opt.upsideDown)
@@ -81,7 +81,7 @@ class PySlider(QSlider):
             p.drawEllipse((int(self.value()))* 7.75,0,44,44)
             
             p.setBrush(QColor("#000000"))
-            p.drawEllipse((int(self.value()))* 3.6 + 6 ,6,32,32)
+            p.drawEllipse((int(self.value()))* 7.75 + 6 ,6,32,32)
 
             # END DRAW
             p.end()

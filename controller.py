@@ -93,12 +93,12 @@ class UI(QMainWindow):
         self.Plus1.clicked.connect(lambda: self.incDash(value = 1))
         self.Plus2.clicked.connect(lambda: self.incDash(value = 2))
 
+        #self.Plus1.clicked.connect(lambda: self.Plus1.hide())
+
         self.Minus1.clicked.connect(lambda: self.decDash(value = 1))
         self.Minus2.clicked.connect(lambda: self.decDash(value = 2))
 
         self.mediaPlayer.stateChanged.connect(self.restartPlayer)
-
-        #move the slider
 
         #show the app
         self.show()

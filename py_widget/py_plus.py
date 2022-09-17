@@ -16,6 +16,9 @@ class PyPlus(QPushButton):
     def hitButton(self, pos: QPoint):
         return self.contentsRect().contains(pos)
 
+    def hide(self) -> None:
+        return super().hide()
+
     def paintEvent(self, e):
         p = QPainter(self)
         p.setRenderHint(QPainter.Antialiasing)
