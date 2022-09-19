@@ -48,6 +48,10 @@ class UI(QMainWindow):
         self.Video.setCameraPosition(QVector3D(-5.015859651283621e-16, 3.5121427064511513e-16, 10.0), distance=150)
         self.Video.orbit(0,90)
 
+        self.timer = QTimer()
+        self.timer.timeout.connect(lambda: self.Video.orbit(-1,0))
+        self.timer.start(20)
+
         # LOAD MEDIA PLAYER
         # self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)
         # self.mediaPlayer.setMedia(QMediaContent(QUrl.fromLocalFile('Resources\Bugattirender.avi')))

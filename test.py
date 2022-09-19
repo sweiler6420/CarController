@@ -3,14 +3,14 @@ import time
 
 import numpy as np
 from PyQt5.QtWidgets import QApplication
-from pyqtgraph.opengl import GLViewWidget, MeshData, GLMeshItem
+from pyqtgraph.opengl import *
 from stl import mesh
+from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     view = GLViewWidget()
-    # https://ozeki.hu/attachments/116/Eiffel_tower_sample.STLpi
     stl_mesh = mesh.Mesh.from_file('Resources\lowPoly.stl')
 
     points = stl_mesh.points.reshape(-1, 3)
