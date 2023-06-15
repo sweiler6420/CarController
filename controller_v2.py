@@ -90,6 +90,5 @@ class UI(QMainWindow):
                 self.animation.start()
                 
 app = QApplication(sys.argv)
-#app.setStyleSheet("""QMainWindow {border-image:url(C:/Users/sweil/OneDrive/Documents/Vehicles/Projects/Porsche/HeadUnit/Apps/Resources/BG.jpg) 0 0 0 0 stretch stretch;}""")
 UIWindow = UI()
 app.exec_()
